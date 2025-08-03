@@ -2,11 +2,19 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
+import sreLogo from "@/assets/LOGO SRE TRANSPARENT.png";
+import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { scrollToSection } = useSmoothScroll();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const handleNavClick = (sectionId: string) => {
+    setIsMenuOpen(false);
+    scrollToSection(sectionId);
+  };
 
   const menuItems = [
     { name: "Accueil", href: "#home" },
@@ -21,11 +29,15 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-energy-gradient rounded-full flex items-center justify-center shadow-soft">
-              <span className="text-white font-bold text-lg lg:text-xl">S</span>
-            </div>
+            <img
+              src={sreLogo}
+              alt="SRE Logo"
+              className="w-14 h-14 lg:w-20 lg:h-20 object-contain"
+            />
             <div className="flex flex-col">
-              <span className="text-xl lg:text-2xl font-bold text-primary">SRE</span>
+              <span className="text-xl lg:text-2xl font-bold text-primary">
+                SRE
+              </span>
               <span className="text-xs lg:text-sm text-muted-foreground hidden sm:block">
                 Solutions & Réalisations Énergétiques
               </span>
@@ -35,13 +47,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                onClick={() => handleNavClick(item.href.replace("#", ""))}
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium bg-transparent border-none cursor-pointer"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -51,7 +63,7 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               <span>+33 1 23 45 67 89</span>
             </div>
-            <Button variant="hero" size="sm">
+            <Button variant="default" size="sm">
               Devis gratuit
             </Button>
           </div>
@@ -79,14 +91,13 @@ const Header = () => {
         >
           <nav className="py-4 space-y-4 border-t border-border">
             {menuItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                onClick={() => handleNavClick(item.href.replace("#", ""))}
+                className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors duration-300 font-medium bg-transparent border-none cursor-pointer"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
             <div className="pt-4 space-y-3 border-t border-border">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -97,7 +108,7 @@ const Header = () => {
                 <Mail className="w-4 h-4" />
                 <span>contact@sre-energie.fr</span>
               </div>
-              <Button variant="hero" size="sm" className="w-full">
+              <Button variant="default" size="sm" className="w-full">
                 Devis gratuit
               </Button>
             </div>

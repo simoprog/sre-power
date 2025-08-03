@@ -10,6 +10,8 @@ All colors MUST be HSL.
   :root {
     --background: 0 0% 100%;
     --foreground: 215 25% 15%;
+    --industrial-bg: hsl(215 25% 98%);
+    --industrial-surface: hsl(215 25% 96%);
 
     --card: 0 0% 100%;
     --card-foreground: 215 25% 15%;
@@ -38,16 +40,22 @@ All colors MUST be HSL.
     --input: 215 25% 94%;
     --ring: 166 68% 42%;
 
-    /* Energy-focused design tokens */
-    --energy-gradient: linear-gradient(135deg, hsl(166 68% 42%), hsl(180 65% 45%));
-    --industrial-gradient: linear-gradient(180deg, hsl(215 25% 96%), hsl(215 25% 92%));
-    --hero-gradient: linear-gradient(135deg, hsl(166 68% 42%) 0%, hsl(180 65% 45%) 50%, hsl(200 60% 50%) 100%);
-    
+    /* Professional industrial design tokens */
+    --energy-accent: hsl(166 68% 42%);
+    --industrial-bg: hsl(215 25% 98%);
+    --industrial-surface: hsl(215 25% 96%);
+    --hero-overlay: linear-gradient(
+      135deg,
+      hsl(0 0% 0% / 0.7) 0%,
+      hsl(0 0% 0% / 0.5) 50%,
+      hsl(0 0% 0% / 0.3) 100%
+    );
+
     /* Professional shadows */
     --shadow-soft: 0 4px 20px -4px hsl(166 68% 42% / 0.15);
     --shadow-medium: 0 8px 32px -8px hsl(166 68% 42% / 0.25);
     --shadow-strong: 0 16px 48px -12px hsl(166 68% 42% / 0.35);
-    
+
     /* Modern transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -117,5 +125,9 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
