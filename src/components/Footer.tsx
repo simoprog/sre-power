@@ -23,11 +23,9 @@ const Footer = () => {
   ];
 
   const services = [
-    "Installations électriques",
-    "Systèmes HVAC",
-    "Automatisation industrielle",
-    "Maintenance préventive",
-    "Audit énergétique",
+    "Électricité industrielle",
+    "Systèmes d'Air Comprimé, refroidissement et Ventilation",
+    "Éclairage industriel",
   ];
 
   const legalLinks = [
@@ -57,9 +55,11 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-energy-gradient rounded-full flex items-center justify-center shadow-soft">
-                  <span className="text-white font-bold text-xl">S</span>
-                </div>
+                <img
+                  src="/src/assets/LOGO SRE TRANSPARENT.png"
+                  alt="SRE"
+                  className="w-12 h-12 rounded-full"
+                />
                 <div>
                   <div className="text-2xl font-bold text-white">SRE</div>
                   <div className="text-sm text-white/70">
@@ -88,7 +88,7 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-4 h-4 text-primary" />
                   <span className="text-sm text-white/90">
-                    Av des FAR, Kissariat Ennajah, N°51, 93000 , 93000 Paris
+                    Av des FAR, Kissariat Ennajah, N°51, 93000 Tétouan
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
