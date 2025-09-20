@@ -18,40 +18,39 @@ const Services = () => {
   const services = [
     {
       icon: Zap,
-      title: "Installations Électriques",
+      title: "Électricité industrielle ",
       description:
-        "Conception et installation de systèmes électriques industriels haute et basse tension.",
+        "Conception et installation de systèmes électriques industriels basse tension.",
       features: [
-        "Tableaux électriques industriels",
-        "Automatismes et contrôle",
-        "Mise aux normes",
-        "Maintenance préventive",
+        "Conception & Réalisation des armoires électriques BT ",
+        "Dimensionnement des installations électriques et bilan énergétiques ",
+        "Solutions de monitoring et de contrôle énergétiques",
+        "Conseil & Accompagnement technique",
       ],
       image: electriciteImage,
     },
     {
       icon: Wind,
-      title: "Systèmes HVAC",
+      title: "Systèmes d'Air Comprimé, refroidissement et Ventilation",
       description:
-        "Solutions de chauffage, ventilation et climatisation pour environnements industriels.",
+        "Solutions pneumatiques, ventilation et climatisation pour environnements industriels.",
       features: [
-        "Climatisation industrielle",
-        "Ventilation spécialisée",
-        "Systèmes de récupération",
-        "Optimisation énergétique",
+        "Étude et réalisation des solutions pour circuits d'air comprimé ",
+        "Propositions d’améliorations et efficience des réseaux d’air comprimé",
+        "Étude et implantation des systèmes de refroidissement pour armoires électriques ",
+        "Étude et installation des systèmes d’extraction d’air et ventilation industrielle ",
       ],
       image: extractionImage,
     },
     {
       icon: Cog,
-      title: "Solutions Industrielles",
+      title: "Éclairage industriel",
       description:
         "Intégration complète de systèmes énergétiques pour installations industrielles.",
       features: [
-        "Audit énergétique",
-        "Automatisation",
-        "Systèmes de supervision",
-        "Efficacité énergétique",
+        "Étude et réalisation des solutions d’éclairage innovante, performante et économique ",
+        "Étude d’amortissement et changement d’éclairage conventionnelle vers LED ",
+        "Optimisation des performances d’éclairage selon la norme NF EN 12464-1 ",
       ],
       image: eclairageImage,
     },
@@ -73,7 +72,7 @@ const Services = () => {
             <span className="block text-primary">& Solutions Complètes</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            De la conception à la maintenance, nous accompagnons vos projets
+            De la conception à la réalisation, nous accompagnons vos projets
             énergétiques avec une expertise technique reconnue et des solutions
             innovantes.
           </p>
@@ -123,13 +122,6 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button
-                    variant="outline"
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
-                  >
-                    En savoir plus
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Button>
                 </CardContent>
               </Card>
             );
@@ -153,9 +145,6 @@ const Services = () => {
             >
               Consultation gratuite
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button variant="outline" size="lg">
-              Télécharger notre brochure
             </Button>
           </div>
         </div>

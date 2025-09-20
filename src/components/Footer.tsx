@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  Phone,
+  Mail,
+  MapPin,
   Clock,
   Linkedin,
   Twitter,
   Facebook,
-  ArrowUp
+  ArrowUp,
 } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const quickLinks = [
@@ -38,16 +38,18 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Facebook, href: "#", label: "Facebook" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/company/sre-power/",
+      label: "LinkedIn",
+    },
   ];
 
   return (
     <footer className="bg-foreground text-white relative overflow-hidden">
       {/* Decorative gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent" />
-      
+
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 lg:px-6 py-16">
@@ -60,43 +62,55 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-white">SRE</div>
-                  <div className="text-sm text-white/70">Solutions & Réalisations Énergétiques</div>
+                  <div className="text-sm text-white/70">
+                    Solutions & Réalisations Énergétiques
+                  </div>
                 </div>
               </div>
               <p className="text-white/80 mb-6 leading-relaxed">
-                Votre partenaire de confiance pour tous vos projets énergétiques industriels. 
-                Plus de 15 ans d'expertise au service de l'innovation.
+                Votre partenaire de confiance pour tous vos projets énergétiques
+                industriels. Plus de 5 ans d'expertise au service de
+                l'innovation.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-white/90">+33 1 23 45 67 89</span>
+                  <span className="text-sm text-white/90">+212 662-192954</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-white/90">contact@sre-energie.fr</span>
+                  <span className="text-sm text-white/90">
+                    contact@srepower.ma
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-white/90">123 Avenue de l'Industrie, 75001 Paris</span>
+                  <span className="text-sm text-white/90">
+                    Av des FAR, Kissariat Ennajah, N°51, 93000 , 93000 Paris
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Clock className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-white/90">Lun-Ven 8h-18h, Urgences 24/7</span>
+                  <span className="text-sm text-white/90">
+                    Lun-Ven 8h-18h, Urgences 24/7
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-6">Navigation</h3>
+              <h3 className="text-lg font-semibold text-white mb-6">
+                Navigation
+              </h3>
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
                     <a
                       href={link.href}
+                      target="_blank"
                       className="text-white/80 hover:text-primary transition-colors duration-300 text-sm"
                     >
                       {link.name}
@@ -108,7 +122,9 @@ const Footer = () => {
 
             {/* Services */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-6">Nos Services</h3>
+              <h3 className="text-lg font-semibold text-white mb-6">
+                Nos Services
+              </h3>
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
@@ -120,7 +136,9 @@ const Footer = () => {
 
             {/* Newsletter & Social */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-6">Restez informé</h3>
+              <h3 className="text-lg font-semibold text-white mb-6">
+                Restez informé
+              </h3>
               <p className="text-white/80 text-sm mb-4">
                 Recevez nos actualités et conseils techniques
               </p>
@@ -134,7 +152,7 @@ const Footer = () => {
                   OK
                 </Button>
               </div>
-              
+
               {/* Social Links */}
               <div className="space-y-3">
                 <h4 className="text-sm font-medium text-white">Suivez-nous</h4>
@@ -173,7 +191,7 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <span className="text-sm text-white/60">
                   © 2024 SRE. Tous droits réservés.

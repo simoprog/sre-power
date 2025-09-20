@@ -2,14 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Send, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
   CheckCircle,
-  Zap 
+  Zap,
 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -21,14 +21,16 @@ const Contact = () => {
     company: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
   });
-  
+
   const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -43,7 +45,7 @@ const Contact = () => {
       company: "",
       phone: "",
       subject: "",
-      message: ""
+      message: "",
     });
   };
 
@@ -51,27 +53,27 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Téléphone",
-      value: "+33 1 23 45 67 89",
-      description: "Lun-Ven 8h-18h"
+      value: "+212 662-192954",
+      description: "Lun-Ven 8h-18h",
     },
     {
       icon: Mail,
       title: "Email",
-      value: "contact@sre-energie.fr",
-      description: "Réponse sous 24h"
+      value: "contact@srepower.ma",
+      description: "Réponse sous 24h",
     },
     {
       icon: MapPin,
       title: "Adresse",
-      value: "123 Avenue de l'Industrie",
-      description: "75001 Paris, France"
+      value: "Av des FAR, Kissariat Ennajah, N°51 ",
+      description: "93000 Tétouan, Maroc ",
     },
     {
       icon: Clock,
       title: "Urgences",
       value: "Support 24/7",
-      description: "Intervention rapide"
-    }
+      description: "Intervention rapide",
+    },
   ];
 
   const services = [
@@ -79,7 +81,7 @@ const Contact = () => {
     "Devis sous 48h",
     "Installation certifiée",
     "Maintenance préventive",
-    "Support technique 24/7"
+    "Support technique 24/7",
   ];
 
   return (
@@ -96,8 +98,8 @@ const Contact = () => {
             <span className="block text-primary">Projet Énergétique</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Nos experts sont à votre disposition pour étudier vos besoins 
-            et vous proposer des solutions adaptées.
+            Nos experts sont à votre disposition pour étudier vos besoins et
+            vous proposer des solutions adaptées.
           </p>
         </div>
 
@@ -115,7 +117,10 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Nom complet *
                       </label>
                       <Input
@@ -129,7 +134,10 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Email *
                       </label>
                       <Input
@@ -147,7 +155,10 @@ const Contact = () => {
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="company"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Entreprise
                       </label>
                       <Input
@@ -160,7 +171,10 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Téléphone
                       </label>
                       <Input
@@ -170,13 +184,16 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="h-12"
-                        placeholder="+33 1 23 45 67 89"
+                        placeholder="+212 662-192954"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Sujet *
                     </label>
                     <Input
@@ -191,7 +208,10 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Message *
                     </label>
                     <Textarea
@@ -206,7 +226,12 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" variant="energy" size="lg" className="w-full">
+                  <Button
+                    type="submit"
+                    variant="energy"
+                    size="lg"
+                    className="w-full"
+                  >
                     <Send className="w-5 h-5 mr-2" />
                     Envoyer ma demande
                   </Button>
@@ -228,14 +253,23 @@ const Contact = () => {
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon;
                   return (
-                    <div key={index} className="flex items-start space-x-3 p-3 rounded-lg hover:bg-accent/50 transition-colors duration-300">
+                    <div
+                      key={index}
+                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-accent/50 transition-colors duration-300"
+                    >
                       <div className="w-10 h-10 bg-energy-gradient rounded-lg flex items-center justify-center flex-shrink-0">
                         <IconComponent className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <div className="font-semibold text-foreground text-sm">{info.title}</div>
-                        <div className="text-primary font-medium">{info.value}</div>
-                        <div className="text-xs text-muted-foreground">{info.description}</div>
+                        <div className="font-semibold text-foreground text-sm">
+                          {info.title}
+                        </div>
+                        <div className="text-primary font-medium">
+                          {info.value}
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {info.description}
+                        </div>
                       </div>
                     </div>
                   );

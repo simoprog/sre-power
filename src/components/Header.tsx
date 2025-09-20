@@ -61,7 +61,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="w-4 h-4" />
-              <span>+33 1 23 45 67 89</span>
+              <span>+212 662-192954</span>
             </div>
             <Button variant="default" size="sm">
               Devis gratuit
@@ -102,11 +102,11 @@ const Header = () => {
             <div className="pt-4 space-y-3 border-t border-border">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                <span>+33 1 23 45 67 89</span>
+                <span>+212 662-192954</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>contact@sre-energie.fr</span>
+                <span>contact@srepower.ma</span>
               </div>
               <Button variant="default" size="sm" className="w-full">
                 Devis gratuit

@@ -46,12 +46,6 @@ const Hero = () => {
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Conception, installation et maintenance de systèmes électriques,
-            HVAC et solutions énergétiques pour l'industrie moderne.
-          </p>
-
           {/* Features List */}
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             {features.map((feature, index) => (
@@ -90,12 +84,12 @@ const Hero = () => {
           {/* Trust Indicators */}
           <div className="mt-16 pt-8 border-t border-white/20">
             <p className="text-white/70 text-sm mb-4">
-              Plus de 500 entreprises nous font confiance
+              Plus de 10 entreprises nous font confiance
             </p>
             <div className="flex justify-center items-center space-x-8 opacity-60">
-              <div className="text-2xl font-bold">500+</div>
+              <div className="text-2xl font-bold">10+</div>
               <div className="w-1 h-8 bg-white/30" />
-              <div className="text-2xl font-bold">15 ans</div>
+              <div className="text-2xl font-bold">5 ans</div>
               <div className="w-1 h-8 bg-white/30" />
               <div className="text-2xl font-bold">24/7</div>
             </div>

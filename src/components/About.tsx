@@ -9,13 +9,13 @@ const About = () => {
   const stats = [
     {
       icon: Users,
-      number: "500+",
+      number: "10+",
       label: "Clients satisfaits",
       description: "Entreprises industrielles",
     },
     {
       icon: Award,
-      number: "15",
+      number: "5",
       label: "Années d'expérience",
       description: "Dans l'énergie industrielle",
     },
@@ -61,7 +61,7 @@ const About = () => {
             </h2>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Depuis plus de 15 ans,{" "}
+              Depuis plus de 5 ans,{" "}
               <strong className="text-foreground">SRE</strong> accompagne les
               entreprises industrielles dans leurs projets énergétiques. Notre
               expertise technique et notre approche personnalisée nous
@@ -69,29 +69,10 @@ const About = () => {
             </p>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Spécialisés dans les installations électriques industrielles, les
-              systèmes HVAC et l'optimisation énergétique, nous intervenons sur
-              tous types d'environnements industriels avec un engagement qualité
-              constant.
+              Spécialisés dans les installations techniques industrielles,
+              l'optimisation énergétique, nous intervenons sur tous types
+              d'environnements industriels avec un engagement qualité constant.
             </p>
-
-            {/* Certifications */}
-            <div className="mb-8">
-              <h3 className="font-semibold text-foreground mb-4">
-                Nos certifications :
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {certifications.map((cert, index) => (
-                  <Badge
-                    key={index}
-                    variant="secondary"
-                    className="bg-primary/10 text-primary hover:bg-primary/20"
-                  >
-                    {cert}
-                  </Badge>
-                ))}
-              </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -101,9 +82,6 @@ const About = () => {
               >
                 Découvrir nos réalisations
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Télécharger notre présentation
               </Button>
             </div>
           </div>
@@ -143,11 +121,20 @@ const About = () => {
             Notre Mission
           </h3>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Accompagner la transition énergétique des entreprises industrielles
-            en proposant des solutions techniques innovantes, durables et
-            parfaitement adaptées à leurs besoins. Notre engagement : la
-            qualité, la performance et le service client au cœur de chaque
-            projet.
+            Conseiller et accompagner nos clients dans la définition de leur
+            besoins, en mettant à leur disposition nos connaissances et notre
+            expérience afin de leur offrir une réponse rapide et efficace.
+          </p>
+        </div>
+        {/* Team Statement */}
+        <div className="mt-20 bg-industrial-bg rounded-2xl p-8 lg:p-12 text-center border">
+          <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-foreground">
+            Notre Équipe
+          </h3>
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Une équipe expérimentée, essentiellement constituée par des
+            professionnelles ayant cumulés des années d'expériences dans ce
+            domaine.
           </p>
         </div>
       </div>
