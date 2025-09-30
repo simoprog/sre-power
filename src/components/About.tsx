@@ -9,13 +9,13 @@ const About = () => {
   const stats = [
     {
       icon: Users,
-      number: "10+",
+      number: "20+",
       label: "Clients satisfaits",
       description: "Entreprises industrielles",
     },
     {
       icon: Award,
-      number: "5",
+      number: "10",
       label: "Années d'expérience",
       description: "Dans l'énergie industrielle",
     },

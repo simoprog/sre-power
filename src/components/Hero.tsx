@@ -84,12 +84,12 @@ const Hero = () => {
           {/* Trust Indicators */}
           <div className="mt-16 pt-8 border-t border-white/20">
             <p className="text-white/70 text-sm mb-4">
-              Plus de 10 entreprises nous font confiance
+              Plus de 20 entreprises nous font confiance
             </p>
             <div className="flex justify-center items-center space-x-8 opacity-60">
-              <div className="text-2xl font-bold">10+</div>
+              <div className="text-2xl font-bold">20+</div>
               <div className="w-1 h-8 bg-white/30" />
-              <div className="text-2xl font-bold">5 ans</div>
+              <div className="text-2xl font-bold">10 ans</div>
               <div className="w-1 h-8 bg-white/30" />
               <div className="text-2xl font-bold">24/7</div>
             </div>

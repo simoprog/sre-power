@@ -53,7 +53,7 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Téléphone",
+      title: "Téléphone mobile",
       value: "+212 662-192954",
       description: "Lun-Ven 8h-18h",
     },
