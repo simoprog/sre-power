@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Phone,
+  PhoneCall,
   Mail,
   MapPin,
   Clock,
@@ -55,6 +56,12 @@ const Contact = () => {
       title: "Téléphone",
       value: "+212 662-192954",
       description: "Lun-Ven 8h-18h",
+    },
+    {
+      icon: PhoneCall,
+      title: "Téléphone fixe",
+      value: "+212 531 105 656",
+      description: "Ligne directe bureau",
     },
     {
       icon: Mail,

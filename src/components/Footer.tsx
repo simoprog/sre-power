@@ -8,7 +8,10 @@ import {
   Twitter,
   Facebook,
   ArrowUp,
+  PhoneIcon,
+  PhoneCall,
 } from "lucide-react";
+import sreLogo from "@/assets/LOGO SRE TRANSPARENT.png";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -56,7 +59,7 @@ const Footer = () => {
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
                 <img
-                  src="/src/assets/LOGO SRE TRANSPARENT.png"
+                  src={sreLogo}
                   alt="SRE"
                   className="w-12 h-12 rounded-full"
                 />
@@ -79,6 +82,13 @@ const Footer = () => {
                   <Phone className="w-4 h-4 text-primary" />
                   <span className="text-sm text-white/90">+212 662-192954</span>
                 </div>
+                <div className="flex items-center space-x-3">
+                  <PhoneCall className="w-4 h-4 text-primary" />
+                  <span className="text-sm text-white/90">
+                    +212 531 105 656
+                  </span>
+                </div>
+
                 <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-primary" />
                   <span className="text-sm text-white/90">
