@@ -61,7 +61,7 @@ const About = () => {
             </h2>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Depuis plus de 5 ans,{" "}
+              Depuis plus de 10 ans,{" "}
               <strong className="text-foreground">SRE</strong> accompagne les
               entreprises industrielles dans leurs projets énergétiques. Notre
               expertise technique et notre approche personnalisée nous
